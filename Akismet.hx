@@ -1,0 +1,57 @@
+package wordpress;
+@:native('\\Akismet')
+extern class Akismet {
+    @:phpClassConst static public final API_HOST:Dynamic;
+    @:phpClassConst static public final API_PORT:Dynamic;
+    @:phpClassConst static public final MAX_DELAY_BEFORE_MODERATION_EMAIL:Dynamic;
+    public static function init():Dynamic;
+    public static function get_api_key():Dynamic;
+    public static function check_key_status(key:Dynamic, ?ip:Dynamic):Dynamic;
+    public static function verify_key(key:Dynamic, ?ip:Dynamic):Dynamic;
+    public static function deactivate_key(key:Dynamic):Dynamic;
+    public static function add_to_jetpack_options_whitelist(options:Array<Dynamic>):Array<Dynamic>;
+    public static function updated_option(old_value:Dynamic, value:Dynamic):Dynamic;
+    public static function added_option(option_name:Dynamic, value:Dynamic):Dynamic;
+    public static function rest_auto_check_comment(commentdata:Dynamic):Dynamic;
+    public static function auto_check_comment(commentdata:Dynamic):Dynamic;
+    public static function get_last_comment():Dynamic;
+    public static function set_last_comment(comment:Dynamic):Dynamic;
+    public static function auto_check_update_meta(id:Dynamic, comment:Dynamic):Dynamic;
+    public static function delete_old_comments():Dynamic;
+    public static function delete_old_comments_meta():Dynamic;
+    public static function delete_orphaned_commentmeta():Dynamic;
+    public static function get_user_comments_approved(user_id:Dynamic, comment_author_email:Dynamic, comment_author:Dynamic, comment_author_url:Dynamic):Dynamic;
+    public static function get_comment_history(comment_id:Dynamic):Dynamic;
+    public static function update_comment_history(comment_id:Int, message:String, ?event:String, ?meta:Array<Dynamic>):Dynamic;
+    public static function check_db_comment(id:Dynamic, ?recheck_reason:Dynamic):Dynamic;
+    public static function recheck_comment(id:Dynamic, ?recheck_reason:Dynamic):Dynamic;
+    public static function transition_comment_status(new_status:Dynamic, old_status:Dynamic, comment:Dynamic):Dynamic;
+    public static function submit_spam_comment(comment_id:Dynamic):Dynamic;
+    public static function submit_nonspam_comment(comment_id:Dynamic):Dynamic;
+    public static function cron_recheck():Dynamic;
+    public static function fix_scheduled_recheck():Dynamic;
+    public static function add_comment_nonce(post_id:Dynamic):Dynamic;
+    public static function is_test_mode():Dynamic;
+    public static function allow_discard():Dynamic;
+    public static function get_ip_address():Dynamic;
+    public static function matches_last_comment(comment:Dynamic):Dynamic;
+    public static function get_user_roles(user_id:Dynamic):Dynamic;
+    public static function last_comment_status(approved:Dynamic, comment:Dynamic):Dynamic;
+    public static function disable_moderation_emails_if_unreachable(emails:Array<Dynamic>, comment_id:Int):Array<Dynamic>;
+    public static function _cmp_time(a:Dynamic, b:Dynamic):Dynamic;
+    public static function _get_microtime():Dynamic;
+    public static function http_post(request:String, path:String, ?ip:String):Array<Dynamic>;
+    public static function update_alert(response:Dynamic):Dynamic;
+    public static function load_form_js():Dynamic;
+    public static function set_form_js_async(tag:Dynamic, handle:Dynamic, src:Dynamic):Dynamic;
+    public static function inject_ak_js(fields:Dynamic):Dynamic;
+    public static function view(name:Dynamic, ?args:Array<Dynamic>):Dynamic;
+    public static function plugin_activation():Dynamic;
+    public static function plugin_deactivation():Dynamic;
+    public static function build_query(args:Array<Dynamic>):String;
+    public static function log(akismet_debug:Dynamic):Dynamic;
+    public static function pre_check_pingback(method:Dynamic):Dynamic;
+    public static function predefined_api_key():Dynamic;
+    public static function display_comment_form_privacy_notice():Dynamic;
+}
+

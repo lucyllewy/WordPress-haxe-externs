@@ -1,0 +1,52 @@
+package wordpress;
+@:native('\\Akismet_Admin')
+extern class Akismet_Admin {
+    @:phpClassConst static public final NONCE:Dynamic;
+    public static function init():Dynamic;
+    public static function init_hooks():Dynamic;
+    public static function admin_init():Dynamic;
+    public static function admin_menu():Dynamic;
+    public static function admin_head():Dynamic;
+    public static function admin_plugin_settings_link(links:Dynamic):Dynamic;
+    public static function load_menu():Dynamic;
+    public static function load_resources():Dynamic;
+    public static function admin_help():wordpress.False;
+    public static function enter_api_key():Dynamic;
+    public static function save_key(api_key:Dynamic):Dynamic;
+    public static function dashboard_stats():Dynamic;
+    public static function rightnow_stats():Dynamic;
+    public static function check_for_spam_button(comment_status:Dynamic):Dynamic;
+    public static function recheck_queue():Dynamic;
+    public static function recheck_queue_portion(?start:Dynamic, ?limit:Dynamic):Dynamic;
+    public static function remove_comment_author_url():Dynamic;
+    public static function add_comment_author_url():Dynamic;
+    public static function comment_row_action(a:Dynamic, comment:Dynamic):Dynamic;
+    public static function comment_status_meta_box(comment:Dynamic):Dynamic;
+    public static function plugin_action_links(links:Dynamic, file:Dynamic):Dynamic;
+    public static function get_spam_count(?type:Dynamic):Dynamic;
+    public static function check_server_ip_connectivity():Dynamic;
+    public static function check_server_connectivity(?cache_timeout:Dynamic):Dynamic;
+    public static function get_server_connectivity(?cache_timeout:Dynamic):Dynamic;
+    public static function are_any_comments_waiting_to_be_checked():Bool;
+    public static function get_page_url(?page:Dynamic):Dynamic;
+    public static function get_akismet_user(api_key:Dynamic):Dynamic;
+    public static function get_stats(api_key:Dynamic):Dynamic;
+    public static function verify_wpcom_key(api_key:Dynamic, user_id:Dynamic, ?extra:Dynamic):Dynamic;
+    public static function connect_jetpack_user():Dynamic;
+    public static function display_alert():Dynamic;
+    public static function display_privacy_notice_control_warning():Dynamic;
+    public static function display_spam_check_warning():Dynamic;
+    public static function display_api_key_warning():Dynamic;
+    public static function display_page():Dynamic;
+    public static function display_start_page():Dynamic;
+    public static function display_stats_page():Dynamic;
+    public static function display_configuration_page():Dynamic;
+    public static function display_notice():Dynamic;
+    public static function display_status():Dynamic;
+    public static function exclude_commentmeta_from_export(exclude:Bool, key:String, meta:Map<String,Dynamic>):Bool;
+    public static function modify_plugin_description(all_plugins:Dynamic):Dynamic;
+    public static function jetpack_comment_form_privacy_notice_url(url:Dynamic):Dynamic;
+    public static function register_personal_data_eraser(erasers:Dynamic):Dynamic;
+    public static function erase_personal_data(email_address:Dynamic, ?page:Dynamic):Array<Dynamic>;
+}
+

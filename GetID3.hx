@@ -1,0 +1,52 @@
+package wordpress;
+@:native('\\getID3')
+extern class GetID3 {
+    @:phpClassConst static public final VERSION:Dynamic;
+    @:phpClassConst static public final FREAD_BUFFER_SIZE:Dynamic;
+    @:phpClassConst static public final ATTACHMENTS_NONE:Dynamic;
+    @:phpClassConst static public final ATTACHMENTS_INLINE:Dynamic;
+    public var encoding:String;
+    public var encoding_id3v1:String;
+    public var option_tag_id3v1:Bool;
+    public var option_tag_id3v2:Bool;
+    public var option_tag_lyrics3:Bool;
+    public var option_tag_apetag:Bool;
+    public var option_tags_process:Bool;
+    public var option_tags_html:Bool;
+    public var option_extra_info:Bool;
+    public var option_save_attachments:Dynamic;
+    public var option_md5_data:Bool;
+    public var option_md5_data_source:Bool;
+    public var option_sha1_data:Bool;
+    public var option_max_2gb_check:Dynamic;
+    public var option_fread_buffer_size:Int;
+    public var filename:Dynamic;
+    public var fp:Dynamic;
+    public var info:Dynamic;
+    public var tempdir:String;
+    public var memory_limit:Int;
+    protected var startup_error:String;
+    protected var startup_warning:String;
+    public function __construct():Dynamic;
+    public function version():String;
+    public function fread_buffer_size():Int;
+    public function setOption(optArray:Array<Dynamic>):Bool;
+    public function openfile(filename:String, ?filesize:Int, ?fp:Dynamic):Bool;
+    public function analyze(filename:String, ?filesize:Int, ?original_filename:String, ?fp:Dynamic):Array<Dynamic>;
+    public function error(message:String):Array<Dynamic>;
+    public function warning(message:String):Bool;
+    public function GetFileFormatArray():Array<Dynamic>;
+    public function GetFileFormat(filedata:String, ?filename:String):Dynamic;
+    public function CharConvert(array:Array<Dynamic>, encoding:String):Dynamic;
+    public function HandleAllTags():Bool;
+    public function getHashdata(algorithm:String):Dynamic;
+    public function ChannelsBitratePlaytimeCalculations():Dynamic;
+    public function CalculateCompressionRatioVideo():Bool;
+    public function CalculateCompressionRatioAudio():Bool;
+    public function CalculateReplayGain():Bool;
+    public function ProcessAudioStreams():Bool;
+    public function getid3_tempnam():Dynamic;
+    public function include_module(name:String):Bool;
+    public static function is_writable(filename:String):Bool;
+}
+
